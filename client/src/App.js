@@ -12,6 +12,7 @@ import ProductEdit from './pages/ProductEdit';
 import ProductCreate from './pages/ProductCreate';
 import ListProduct from './pages/ListProduct';
 import Profile from './pages/Profile';
+import Cart from './pages/Cart';
 import EditProfile from './pages/EditProfile';
 
 function App() {
@@ -71,6 +72,7 @@ function App() {
         <Route path="/list-product" element={<ListProduct />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/edit-profile/:id" element={<EditProfile />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </>
   );

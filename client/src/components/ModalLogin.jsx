@@ -41,7 +41,7 @@ function ModalLogin() {
             });
 
             setAuthToken(localStorage.token);
-
+            window.location.reload();
             // Status check
             navigate("/")
 
@@ -51,7 +51,6 @@ function ModalLogin() {
                 icon: 'success',
                 confirmButtonText: 'Kembali'
             })
-
         } catch (error) {
             Swal.fire({
                 title: 'Error!',

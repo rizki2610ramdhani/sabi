@@ -132,7 +132,7 @@ export default function ProductEdit() {
                 </Col>
                 {preview && (
                     <Col md={5} style={{ textAlign: "center" }} className="py-2 px-5">
-                        <img src={preview} alt="user" className='img-fluid my-3' style={{ width: "90%" }} />
+                        <img src={preview} alt="" className='img-fluid my-3' style={{ width: "90%" }} />
                     </Col>
                 )}
             </Row>

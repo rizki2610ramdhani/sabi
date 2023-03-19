@@ -29,6 +29,10 @@ func (h *handlerCart) FindCart(c echo.Context) error {
 		return c.JSON(http.StatusInternalServerError, dto.ErrorResult{Code: http.StatusBadRequest, Message: err.Error()})
 	}
 
+	for i, p := range carts {
+		carts[i].Product.Image = path_file + p.Product.Image
+	}
+
 	return c.JSON(http.StatusOK, dto.SuccessResult{Code: http.StatusOK, Data: carts})
 }
 

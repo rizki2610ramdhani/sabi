@@ -157,3 +157,32 @@
     border-radius: 10px;
     padding: 4px 0px;
 }
+
+.crt-btn-action-count{
+    border: none !important;
+    text-decoration: none !important;
+    background-color: white;
+    color: #613D2B;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.crt-count{
+    margin: 0 6px;
+    background-color: #F6E6DA;
+    padding: 1px 8px;
+}
+
+.crt-text-total{
+        font-weight:700;
+}
+
+.crt-pay-btn{
+    margin: 20px 0;
+    background-Color:#613D2B;
+    border-radius: 7px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    padding: 3px;
+}
