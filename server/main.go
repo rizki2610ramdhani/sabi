@@ -5,6 +5,7 @@ import (
 	"backend/pkg/mysql"
 	"backend/routes"
 	"fmt"
+	"os"
 
 	"github.com/joho/godotenv"
 	"github.com/labstack/echo/v4"
@@ -16,7 +17,7 @@ func main() {
 	if errEnv != nil {
 		panic("Failed to load env file")
 	}
-
+	var PORT = os.Getenv("PORT")
 	e := echo.New()
 
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
@@ -32,6 +33,6 @@ func main() {
 
 	e.Static("/uploads", "./uploads")
 
-	fmt.Println("server running localhost:5000")
-	e.Logger.Fatal(e.Start("localhost:5000"))
+	fmt.Println("server running localhost:" + PORT)
+	e.Logger.Fatal(e.Start(":" + PORT)) // delete localhost
 }
